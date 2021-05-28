@@ -27,6 +27,7 @@ func int2VnStr(number int64) string {
 
 	tail := [...]string{" mươi", " mốt", " hai", " ba", " tư", " lăm", " sáu", " bảy", " tám", " chín"}
 
+	taild1 := [...]string{"mười", "mười một", "mười bốn"}
 	var n, k, d1, d2, d3, dd int
 	var vn, neg, s string
 
@@ -61,13 +62,13 @@ func int2VnStr(number int64) string {
 				case 1:
 					switch d1 {
 					case 0:
-						s += "mười"
+						s += taild1[d1]
 					case 1:
-						s += "mười một"
+						s += taild1[d1]
 					case 4:
-						s += "mười bốn"
+						s += taild1[2]
 					default:
-						s += "mười" + tail[d1]
+						s += taild1[0] + tail[d1]
 					}
 				default:
 					s += digit[d2] + tail[0] + tail[d1]
