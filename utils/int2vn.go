@@ -41,7 +41,6 @@ func int2VnStr(number int64) string {
 
 		if n > 0 {
 			d3 = int(n / 100)
-
 			if (number > 1000) || (d3 > 0) {
 				s = digit[d3] + " trăm "
 			} else {
@@ -71,7 +70,7 @@ func int2VnStr(number int64) string {
 						s += taild1[0] + tail[d1]
 					}
 				default:
-					s += digit[d2] + tail[0] + tail[d1]
+					s += digit[d2] + " mươi" + tail[d1]
 				}
 			}
 			vn = s + thousand[k] + vn
